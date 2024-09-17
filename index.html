@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="icon" type="image/x-icon" href="/fevico.jpg" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <section id="add-todo" class="grid">
+            <input type="text" id="todo-val" placeholder="Enter Title" />
+            <select id="priority-val">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <select id="category-val">
+                <option value="general" selected>General</option>
+                <option value="work">Work</option>
+                <option value="home">Home</option>
+                <option value="self">Self</option>
+            </select>
+            <input type="button" id="add-btn" value="Add" />
+        </section>
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search Todos" />
+            <button id="sort-btn">Sort by Priority</button>
+            <select id="category-filter">
+                <option value="general" selected>General</option>
+                <option value="work">Work</option>
+                <option value="home">Home</option>
+                <option value="self">Self</option>
+            </select>
+        </div>
+        <section id="show-todo" class="todo-list">
+        </section>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
