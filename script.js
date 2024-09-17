@@ -125,7 +125,7 @@ function searchTodos(query) {
 
 function sortTodosByPriority() {
     const sortedTodos = [...allTodos].sort((a, b) => {
-        const priorityOrder = { 'High': 1, 'Medium': 2, 'Low': 3 };
+        const priorityOrder = { 'high': 1, 'medium': 2, 'low': 3 };
         return priorityOrder[a.priority] - priorityOrder[b.priority];
     });
     showFilteredTodos(sortedTodos);
