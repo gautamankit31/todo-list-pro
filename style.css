@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    display: flex;
+    justify-content:center;
+    min-height: 100vh; /* Full viewport height */
+}
+.item1 { grid-area: title; }
+.item2 { grid-area: priority; }
+.item3 { grid-area: category; }
+.item4 { grid-area: add; }
+
+.grid {
+    display: grid;
+    margin-top:30px;
+    grid-template-areas:
+        'title title title'
+        'priority category add';
+    gap: 10px;
+    background-color: white; /* White background for grid container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for grid container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Grey shadow for grid container */
+    width: 100%; 
+    max-width: 1200px; /* Max width to prevent the grid from stretching too much *//* Light grey background for the box */
+}
+
+.item1, .item2, .item3, .item4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    background-color: white; /* White background for grid items */
+    border-radius: 5px; /* Slight rounding for grid item boxes */
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0.4, 0.2); /* Slight shadow for grid items */
+}
+
+.item4 {
+    justify-content: center;
+
+}
+.item4 input{
+    background-color:transparent;
+    outline:none;
+    border:none;
+    box-shadow:none;
+    padding: 10px 20px;
+}
+.item1{
+    margin-bottom:10px;
+}
+.item1 input{
+    padding:10px;
+}
+
+.controls{
+    display:flex;
+    gap:40px;
+    margin-top:40px;
+    background-color: white; /* White background for grid container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for grid container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.todo-list{
+    display:flex;
+    margin-top:5px;
+    flex-direction:column;
+    gap:10px;
+    background-color: white; /* White background for grid container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for grid container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.todo-div{
+    display:flex;
+    gap:10px;
+    justify-content:space-between;
+    background-color: white; /* White background for grid container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for grid container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.4, 0.2);
+
+}
+
+.span-div{
+    display:flex;
+    gap:10px;
+}
+.span-div button{
+    background-color:transparent;
+    outline:none;
+    border:none;
+    box-shadow:none;
+}

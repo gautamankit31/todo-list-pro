@@ -5,22 +5,25 @@ const addBtn = document.querySelector('#add-btn');
 const showTodo = document.querySelector('#show-todo');
 let allTodos = JSON.parse(localStorage.getItem('todos')) || [];
 
+//! create  Button -----
 function createTodoElement(todo) {
     const div = document.createElement('div');
+    const span=document.createElement('span');
     const p = document.createElement('p');
     const check = document.createElement('input');
     const editBtn = document.createElement('button');
     const deleteBtn = document.createElement('button');
-
+    div.setAttribute('class','todo-div')
     check.setAttribute('type', 'checkbox');
+    span.setAttribute('class','span-div')
     check.checked = todo.completed;
-    p.innerHTML = `${todo.title} (${todo.category}, ${todo.priority})`;
+    p.innerHTML = `${todo.title}`;
     if (todo.completed) p.style.textDecoration = 'line-through';
 
-    editBtn.textContent = 'Edit';
-    deleteBtn.textContent = 'Delete';
-
-    div.append(check, p, editBtn, deleteBtn);
+    editBtn.innerHTML = `<i style="font-size:24px" class="fa">&#xf044;</i>`;
+    deleteBtn.innerHTML = `<i style="font-size:24px" class="fa">&#xf014;</i>`;
+     span.append(editBtn,deleteBtn);
+    div.append(check, p, span);
 
     editBtn.addEventListener('click', () => editTodo(todo, div));
     check.addEventListener('click', (e) => crossTodo(e, todo, p));
@@ -29,6 +32,8 @@ function createTodoElement(todo) {
     return div;
 }
 
+//! Edit button logics here ----
+
 function editTodo(todo, div) {
     const editDiv = document.createElement('div');
     const textInput = document.createElement('input');
@@ -36,7 +41,6 @@ function editTodo(todo, div) {
     const categorySelect = document.createElement('select');
     const updateBtn = document.createElement('button');
     const cancelBtn = document.createElement('button');
-
     textInput.value = todo.title;
     prioritySelect.innerHTML = `
             <option value="high">High</option>
@@ -79,6 +83,8 @@ function crossTodo(e, todo, p) {
     saveTodos();
 }
 
+//! Delete Logics here ---------
+
 function deleteTodo(todo, div) {
     allTodos = allTodos.filter(t => t !== todo);
     div.remove();
@@ -86,18 +92,23 @@ function deleteTodo(todo, div) {
     showAllTodos();
 }
 
+//! showAllTodos  Logics here ---------
+
 function showAllTodos() {
     showTodo.innerHTML = '';
     todoVal.value="";
     todoVal.placeholder="Enter Title"
     if (allTodos.length === 0) {
-        showTodo.innerHTML = 'No Todos available';
+        showTodo.innerHTML = 'No Todos Available';
     } else {
         allTodos.forEach(todo => {
             showTodo.append(createTodoElement(todo));
         });
     }
 }
+
+
+//! addTodo  Logics here ---------
 
 function addTodo(e) {
     const newTodo = {
@@ -139,7 +150,7 @@ function filterTodosByCategory(category) {
 function showFilteredTodos(filteredTodos) {
     showTodo.innerHTML = '';
     if (filteredTodos.length === 0) {
-        showTodo.innerHTML = 'No Todos available';
+        showTodo.innerHTML = 'No Todos Available';
     } else {
         filteredTodos.forEach(todo => {
             showTodo.append(createTodoElement(todo));

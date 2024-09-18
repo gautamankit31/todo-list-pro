@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="icon" type="image/x-icon" href="/fevico.jpg" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="fevico.jpg"/>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
     <div class="container">
-        <section id="add-todo" class="grid">
-            <input type="text" id="todo-val" placeholder="Enter Title" />
-            <select id="priority-val">
-                <option value="high">High</option>
-                <option value="medium" selected>Medium</option>
-                <option value="low">Low</option>
-            </select>
-            <select id="category-val">
-                <option value="general" selected>General</option>
-                <option value="work">Work</option>
-                <option value="home">Home</option>
-                <option value="self">Self</option>
-            </select>
-            <input type="button" id="add-btn" value="Add" />
-        </section>
-        <div class="controls">
-            <input type="text" id="search-input" placeholder="Search Todos" />
-            <button id="sort-btn">Sort by Priority</button>
-            <select id="category-filter">
-                <option value="general" selected>General</option>
-                <option value="work">Work</option>
-                <option value="home">Home</option>
-                <option value="self">Self</option>
-            </select>
+      <section id="add-todo" class="grid">
+        <div class="item1">
+          <input type="text" id="todo-val" placeholder="Enter Title" />
         </div>
-        <section id="show-todo" class="todo-list">
-        </section>
+        <div class="item2">
+          <p>Priority</p>
+          <select id="priority-val">
+            <option value="high">High</option>
+            <option value="medium" selected>Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="item3">
+          <p>Category</p>
+          <select id="category-val">
+            <option value="general" selected>General</option>
+            <option value="work">Work</option>
+            <option value="home">Home</option>
+            <option value="self">Self</option>
+          </select>
+        </div>
+        <div class="item4">
+          <input type="button" id="add-btn" value="Add" />
+        </div>
+      </section>
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="Search Todos" />
+        <button id="sort-btn">Sort by Priority</button>
+        <select id="category-filter">
+          <option value="general" selected>General</option>
+          <option value="work">Work</option>
+          <option value="home">Home</option>
+          <option value="self">Self</option>
+        </select>
+      </div>
+      <section id="show-todo" class="todo-list"></section>
     </div>
-    <script src="/script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
