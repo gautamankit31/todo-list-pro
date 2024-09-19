@@ -37,6 +37,7 @@
 
 ### Project Structure
 .
+
 ├── favico.jpg        # Favico Icon
 
 ├── index.html        # Main HTML file
@@ -46,6 +47,7 @@
 ├── script.js         # JavaScript logic (CRUD operations, LocalStorage)
 
 └── README.md         # Project documentation
+
 
 ### Screenshot
 ![Screenshot 2024-09-19 131106](https://github.com/user-attachments/assets/ee8049ae-94e4-4259-8666-7afbfc945cd8)
