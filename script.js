@@ -111,6 +111,7 @@ function showAllTodos() {
 //! addTodo  Logics here ---------
 
 function addTodo(e) {
+    if(todoVal.value === '' || priorityVal.value === '' || categoryVal.value === '') {return;}
     const newTodo = {
         title: todoVal.value,
         priority: priorityVal.value,
