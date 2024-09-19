@@ -38,9 +38,13 @@
 ### Project Structure
 .
 ├── favico.jpg        # Favico Icon
+
 ├── index.html        # Main HTML file
+
 ├── style.css         # CSS styling (Grid, Flexbox)
+
 ├── script.js         # JavaScript logic (CRUD operations, LocalStorage)
+
 └── README.md         # Project documentation
 
 ### Screenshot
