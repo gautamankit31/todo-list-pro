@@ -1,4 +1,4 @@
-# To-Do List Pro
+# To-Do List Pro 
 
 **To-Do List Pro** is a powerful, user-friendly task management application that helps you organize your tasks efficiently. It allows you to prioritize tasks, categorize them, and manage everything from a sleek, responsive interface built with **CSS Grid** and **Flexbox**. Tasks are stored locally in the browser using **localStorage**, so your data is safe even after a page reload.
 
