@@ -31,23 +31,9 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-list-pro.git
+   git clone https://github.com/gautamankit31/todo-list-pro.git
    cd todo-list-pro
    open index.html
-
-### Project Structure
-.
-
-├── favico.jpg        # Favico Icon
-
-├── index.html        # Main HTML file
-
-├── style.css         # CSS styling (Grid, Flexbox)
-
-├── script.js         # JavaScript logic (CRUD operations, LocalStorage)
-
-└── README.md         # Project documentation
-
 
 ### Screenshot
 ![Screenshot 2024-09-19 131106](https://github.com/user-attachments/assets/ee8049ae-94e4-4259-8666-7afbfc945cd8)
